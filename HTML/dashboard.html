@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='../CSS/dashboard.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> <!-- Animation Stylesheet From https://animate.style/ -->
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class='Container'>
+      <div class='Banner'>
+        <div class='Title'>
+          <header>
+            <h1 class='animate__animated animate__slideInLeft'>Dashboard</h1>
+          </header>
+        </div>
+        <div class='SubContent animate__animated animate__fadeInTopRight'>
+          <nav>
+            <a href='../index.html'>Cover Page</a>
+            <a href='dashboard.html'>Dashboard</a>
+          </nav>
+        </div>
+      </div>
+      <span class='Horizontal_Spacer'></span>
+      <div class='Layer_1'>
+        <div class='Card Card_1 animate__animated animate__fadeInTopLeft'>
+          <h2>Upcoming Tasks</h2>
+          <ul>
+            <li><a class='Text'>MA0004 Maths Test | 23rd February</a></li>
+            <li><a class='Text'>IN0005 Python Problem Solving 4 | 3th April</a></li>
+            <li><a class='Text'>IN0006 Web Development | 3rd April </a></li>
+            <li><a class='Text'>IN0008 Employability Skills | 4th May</a></li>
+          </ul>
+        </div>
+        <span class='Vertical_Spacer'></span>
+        <div class='Card Card_2 animate__animated animate__fadeInDownBig'>
+          <h2>Time Spent Working This Week</h2>
+          <canvas id='Bar_Chart'></canvas>
+        </div>
+        <span class='Vertical_Spacer'></span>
+        <div class='Card Card_3 animate__animated animate__fadeInRightBig'>
+          <h2>You Have Worked</h2>
+          <h1>6 Hours 45 Minutes</h1>
+          <h2>This Week</h2>
+        </div>
+        <span class='Vertical_Spacer'></span>
+        <div class='Card Card_4 animate__animated animate__fadeInBottomRight'>
+          <h2>Study Tips</h2>
+          <h2 id='Study_Tip'>Pick a place and time</h2>
+        </div>
+      </div>
+      <span class='Horizontal_Spacer'></span>
+      <div class='Layer_2'>
+        <button class='Hidden' onclick='to_time_tracker()'>
+          <div class='Card Card_5 animate__animated animate__fadeInUpBig'>
+            <h2>Edit Time Tracker</h2>
+          </div>
+        </button>
+        <span class='Vertical_Spacer'></span>
+        <button class='Hidden' onclick='to_timer()'>
+          <div class='Card Card_6 animate__animated animate__fadeInBottomRight' href='HTML/timer.html'>
+            <h2>Timer</h2>
+          </div>
+        </button>
+      </div>
+      <span class='Horizontal_Spacer'></span>
+      <footer class='Card Footer animate__animated animate__fadeInUpBig'>
+        <p>
+          Need Support? Send Us A Message At <a href='mailto:muhammed-yousuf.ahmed@city.ac.uk'>WebDevGroup5@City.ac.uk</a>
+        </p>
+      </footer>
+    </div>
+    <script src='../JS/dashboard.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/chart.js'></script> <!-- Chart.js Library was used from: https://www.chartjs.org/-->
+    <script>
+      const Bar_Chart = document.getElementById('Bar_Chart');
+
+      new Chart(Bar_Chart, {
+       type: 'bar',
+       data: {
+         labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+         datasets: [{
+           label: 'Minutes Working',
+           data: [15, 80, 30, 50, 60, 30, 20],
+           borderWidth: 1,
+           backgroundColor: 'rgba(0, 0, 0, 0.85)',
+         }]
+       },
+       options: {
+         scales: {
+           x:{
+             title:{
+               display: false,
+               text: 'Days',
+               color: 'rgba(0, 0, 0, 1)',
+             },
+             ticks: {
+               color: 'rgba(0, 0, 0, 1)',
+             }
+           },
+           y: {
+             beginAtZero: true,
+             title:{
+               display: true,
+               text: 'Time In Minutes',
+               color: 'rgba(0, 0, 0, 0.85)',
+             },
+             ticks: {
+               color: 'rgba(0, 0, 0, 0.85)',
+             }
+           }
+         },
+         plugins: {
+            legend: {
+                display: false,
+              }
+            }
+          }
+        }
+      );
+
+    </script>
+  </body>
+</html>

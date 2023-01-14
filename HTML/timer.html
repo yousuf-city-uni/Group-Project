@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='../CSS/timer.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> <!-- Animation Stylesheet From https://animate.style/ -->
+    <title>Timer</title>
+  </head>
+  <body>
+    <div class='Container'>
+      <div class='Banner'>
+        <div class='Title'>
+          <header>
+            <h1 class='animate__animated animate__slideInLeft'>Timer</h1>
+          </header>
+        </div>
+        <div class='SubContent animate__animated animate__fadeInTopRight'>
+          <nav>
+            <a href='../index.html'>Cover Page</a>
+            <a href='dashboard.html'>Dashboard</a>
+          </nav>
+        </div>
+      </div>
+      <div class='Body'>
+        <div class='Timer'>
+          <p class='animate__animated animate__backInDown' id='Counter'>10:00</p>
+          <div class='Controls animate__animated animate__backInUp'>
+            <button onclick='start()'>Start</button>
+            <span class='Spacer'></span>
+            <button id='pause' onclick='pause()'>Pause</button>
+            <span class='Spacer'></span>
+            <button id='reset' onclick='reset()'>Reset</button>
+          </div>
+          <div class='Timer_Length_Manager animate__animated animate__backInUp'>
+            <form>
+              <select id="Timer_Length">
+                <option value="1_Minutes">1 Minute</option>
+                <option value="5_Minutes">5 Minutes</option>
+                <option value="10_Minutes">10 Minutes</option>
+                <option value="15_Minutes">15 Minutes</option>
+                <option value="20_Minutes">20 Minutes</option>
+                <option value="25_Minutes">25 Minutes</option>
+                <option value="30_Minutes">30 Minutes</option>
+              </select>
+            </form>
+            <span class='Spacer'></span>
+            <button id='Set_Time' onclick='set_time()'>Set Time</button>
+          </div>
+        </div>
+      </div>
+      <span class='Horizontal_Spacer'></span>
+      <footer class='Card Footer animate__animated animate__fadeInUpBig'>
+        <p>
+          Need Support? Send Us A Message At <a href='mailto:muhammed-yousuf.ahmed@city.ac.uk'>WebDevGroup5@City.ac.uk</a>
+        </p>
+      </footer>
+    </div>
+    <script src='../JS/timer.js'></script>
+  </body>
+</html>

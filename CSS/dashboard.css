@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap'); /* font-family: 'ABeeZee', sans-serif; */
+
+body{
+  font-family: 'ABeeZee', sans-serif;
+  background-color: #f8d4b4;
+  overflow: hidden;
+}
+
+/* ---Banner--- */
+
+body > .Container > .Banner{
+  display: flex;
+}
+
+body > .Container > .Banner > .Title{
+  float: left;
+  margin: auto;
+}
+
+body > .Container > .Banner > .Title > h1{
+  font-size: 3em;
+  text-align: left;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 20px;
+  color: black;
+}
+
+body > .Container > .Banner > .SubContent{
+  float: right;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+body > .Container > .Banner > .SubContent > nav > a{
+  margin: auto;
+  text-decoration: none;
+  padding: 5px;
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+body > .Container > .Banner > .SubContent > nav > a:hover{
+  cursor: pointer;
+  border-bottom: none;
+}
+
+/* ---Spacers--- */
+
+.Vertical_Spacer{
+  width: 20px;
+  height: auto;
+  padding: 5px;
+}
+
+.Horizontal_Spacer{
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+}
+
+/* ---Website Content---*/
+
+.Layer_1{
+  display: flex;
+  justify-content: center;
+}
+
+.Layer_2{
+  display: flex;
+  justify-content: center;
+}
+
+.Card{
+  background-color: #f9e7d5;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+}
+
+.Card_5:hover{
+  cursor: pointer;
+}
+
+.Card_6:hover{
+  cursor: pointer;
+}
+
+.Card > h2{
+  text-align: center;
+}
+
+.Card_1 > h2{
+  text-align: center;
+  padding: 20px;
+}
+
+.Card_1 > ul,li{
+  list-style: none;
+  padding: 5px;
+}
+
+.Card_1 > ul,li > a{
+  font-size: 0.9rem;
+}
+.Card_1 > button{
+  background-color: inherit;
+  border: none;
+}
+
+.Card_1 > button:hover{
+  cursor: pointer;
+}
+
+.Card_3{
+  padding: 10px;
+}
+
+.Card_3 > h2{
+  text-align: center;
+}
+
+.Card_3 > h1{
+  text-align: center;
+}
+
+.Card_4{
+  padding: 20px;
+  min-width: 300px;
+}
+
+#Study_Tip{
+  margin: auto;
+  font-size: 1.25rem;
+}
+
+.Hidden{
+  background-color: inherit;
+  border: none;
+}
+
+.Footer{
+  text-align: center;
+}

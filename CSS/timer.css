@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+
+body{
+  font-family: 'ABeeZee', sans-serif;
+  background-color: #f8d4b4;
+  overflow: hidden;
+}
+
+/* ---Banner--- */
+body > .Container > .Banner{
+  display: flex;
+}
+
+body > .Container > .Banner > .Title{
+  float: left;
+  margin: auto;
+}
+
+body > .Container > .Banner > .Title > h1{
+  font-size: 3em;
+  text-align: left;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 20px;
+  color: black;
+}
+
+body > .Container > .Banner > .SubContent{
+  float: right;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+body > .Container > .Banner > .SubContent > nav > a{
+  margin: auto;
+  text-decoration: none;
+  padding: 5px;
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+body > .Container > .Banner > .SubContent > nav > a:hover{
+  cursor: pointer;
+  border-bottom: none;
+}
+
+/* ---Timer--- */
+
+body > .Container > .Body >.Timer{
+  justify-content: center;
+}
+
+body > .Container > .Body >.Timer > .Controls{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+body > .Container > .Body >.Timer > .Controls > button{
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 2em;
+  background-color: #f9e7d5;
+  border: none;
+  border-radius: 10px;
+  min-width: 170px;
+}
+
+body > .Container > .Body >.Timer > .Controls > button:hover{
+  cursor: pointer;
+}
+
+body > .Container > .Body >.Timer > .Timer_Length_Manager{
+  display: flex;
+  justify-content: center;
+}
+
+body > .Container > .Body >.Timer > .Timer_Length_Manager > form > select{
+  background-color: #f9e7d5;
+  border: none;
+  font-size: 2em;
+  border-radius: 10px;
+  text-align: center;
+}
+
+body > .Container > .Body >.Timer > .Timer_Length_Manager > button{
+  background-color: #f9e7d5;
+  border: none;
+  font-size: 2em;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+}
+
+#Counter{
+  font-size: 7rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.Card{
+  background-color: #f9e7d5;
+  border-radius: 10px;
+  padding: 5px;
+  width: auto;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
+}
+
+.Spacer{
+  width: 20px;
+  height: auto;
+  padding: 5px;
+}
+
+#Set_Time:hover{
+  cursor: pointer;
+}
+
+.Horizontal_Spacer{
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+}
+
+.Footer{
+  text-align: center;
+}

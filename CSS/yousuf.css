@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+
+body{
+  font-family: 'ABeeZee', sans-serif;
+  background-color: #f8d4b4;
+  background-size: auto;
+  overflow: hidden;
+}
+
+/* ---Banner--- */
+
+body > .Container > .Banner{
+  display: flex;
+}
+
+body > .Container > .Banner > .Title{
+  float: left;
+  margin: auto;
+}
+
+body > .Container > .Banner > .Title > h1{
+  font-size: 3em;
+  text-align: left;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 20px;
+  color: black;
+}
+
+body > .Container > .Banner > .SubContent{
+  float: right;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+body > .Container > .Banner > .SubContent > nav > a{
+  margin: auto;
+  text-decoration: none;
+  padding: 5px;
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+body > .Container > .Banner > .SubContent > nav > a:hover{
+  cursor: pointer;
+  border-bottom: none;
+}
+
+.Card{
+  background-color: #f9e7d5;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
+}
+
+/* ---Spacer--- */
+
+.Horizontal_Spacer{
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+}
+
+.Vertical_Spacer{
+  width: 20px;
+  height: auto;
+  padding: 5px;
+}
+
+/* ---Main Content--- */
+
+.main_content{
+  justify-content: center;
+}
+
+.Icon{
+  justify-content: center;
+  text-align: center;
+}
+
+.Intro{
+  padding: 10px;
+}
+
+.layer_1{
+  display: flex;
+  justify-content: center;
+}
+
+.layer_2{
+  display: flex;
+  justify-content: center;
+}
+
+.Card_1{
+  padding: 20px;
+}
+
+.Card_1 > figure > figcaption > h2{
+  font-size: 1.1rem;
+}
+
+.Card_2{
+  padding: 20px;
+}
+
+.Card_2 > p{
+  font-size: 1.1rem;
+}
+
+.Card_3{
+  padding: 20px;
+}
+
+.Card_3 > p{
+  font-size: 1.1rem;
+}
+
+.Card_4{
+  padding: 20px;
+}
+
+.Card_4 > ul,li{
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+  list-style: none;
+}
+
+.Card_4 > ul > li > a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+}
+
+.Card_5 > p{
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.map{
+  margin: auto;
+}
+
+.Footer{
+  text-align: center;
+}

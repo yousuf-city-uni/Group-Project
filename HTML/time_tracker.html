@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='../CSS/time_tracker.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> <!-- Animation Stylesheet From https://animate.style/ -->
+    <title>Timer</title>
+  </head>
+  <body>
+    <div class='Container'>
+      <div class='Banner'>
+        <div class='Title'>
+          <header>
+            <h1 class='animate__animated animate__slideInLeft'>Time Tracker</h1>
+          </header>
+        </div>
+        <div class='SubContent animate__animated animate__fadeInTopRight'>
+          <nav>
+            <a href='../index.html'>Cover Page</a>
+            <a href='dashboard.html'>Dashboard</a>
+          </nav>
+        </div>
+      </div>
+      <div class='Body'>
+        <div class='Left'>
+          <div class='Card animate__animated animate__fadeInLeft'>
+            <form>
+              <label>Task Name</label>
+              <br>
+              <input type="text" id='Task_Name'>
+              <br>
+              <br>
+              <label>Task Duration (Minutes)</label>
+              <br>
+              <input type="text" id='Task_Duration'>
+              <br>
+              <br>
+              <label>Task Description</label>
+              <br>
+              <input type="text" id='Task_Description'>
+              <br>
+              <br>
+              <select id="Bar_Colour">
+                <option value="Black">Black</option>
+                <option value="White">White</option>
+                <option value="Red">Red</option>
+                <option value="Orange">Orange</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Green">Green</option>
+                <option value="Blue">Blue</option>
+              </select>
+            </form>
+            <br>
+            <button id='Add_Task' onclick='Add_Task()'>Add Task</button>
+          </div>
+          <span class='Horizontal_Spacer'></span>
+          <div class='Card animate__animated animate__fadeInLeft' id='Tasks'>
+            <h2>Tasks And Durations</h2>
+          </div>
+        </div>
+        <div class='Right'>
+          <div class='Card animate__animated animate__fadeInRight'>
+            <canvas id='Bar_Chart'></canvas>
+          </div>
+        </div>
+      </div>
+      <span class='Horizontal_Spacer'></span>
+      <footer class='Card Footer animate__animated animate__fadeInUpBig'>
+        <p>
+          Need Support? Send Us A Message At <a href='mailto:muhammed-yousuf.ahmed@city.ac.uk'>WebDevGroup5@City.ac.uk</a>
+        </p>
+      </footer>
+      <script src='https://cdn.jsdelivr.net/npm/chart.js'></script> <!-- Chart.js Library was used from: https://www.chartjs.org/-->
+      <script>
+        const Bar_Chart = document.getElementById('Bar_Chart');
+        const black = 'rgba(0, 0, 0, 0.85)';
+        const white = 'rgba(255, 255, 255, 0.85)';
+        const red = 'rgba(255, 0, 0, 0.85)';
+        const orange = 'rgba(255, 140, 0, 0.85)';
+        const yellow = 'rgba(255, 215, 0, 0.85)';
+        const green = 'rgba(154, 205, 50, 0.85)';
+        const blue = 'rgba(0, 191, 255, 0.85)';
+        var Tasks = [];
+        var Time_Spent = [];
+        var Bar_Colour = [];
+
+        const Graph = new Chart(Bar_Chart, {
+         type: 'bar',
+         data: {
+           labels: Tasks,
+           datasets: [{
+             label: 'Minutes Studying',
+             data: Time_Spent,
+             borderWidth: 1,
+             backgroundColor: Bar_Colour,
+           }]
+         },
+         options: {
+           scales: {
+             x:{
+               title:{
+                 display: false,
+                 text: 'Days',
+                 color: 'rgba(0, 0, 0, 1)',
+               },
+               ticks: {
+                 color: 'rgba(0, 0, 0, 1)',
+               }
+             },
+             y: {
+               beginAtZero: true,
+               title:{
+                 display: true,
+                 text: 'Time In Minutes',
+                 color: 'rgba(0, 0, 0, 0.85)',
+               },
+               ticks: {
+                 color: 'rgba(0, 0, 0, 0.85)',
+               }
+             }
+           },
+           plugins: {
+              legend: {
+                  display: false,
+                }
+              }
+            }
+          }
+        );
+
+        function Add_Task() {
+          const task = document.getElementById('Task_Name').value;
+          var time = document.getElementById('Task_Duration').value;
+          const desc = document.getElementById('Task_Description').value;
+          time = parseInt(time)
+          Tasks.push(task);
+          Time_Spent.push(time);
+
+          var html = document.createElement("p");
+          var html_content = document.createTextNode(task + ' for ' + time + ' minutes ');
+          html.appendChild(html_content);
+          document.getElementById('Tasks').appendChild(html)
+
+          const colour = document.getElementById('Bar_Colour').value
+
+          if (colour == 'Black') {
+            Bar_Colour.push(black);
+          } else if (colour == 'White') {
+            Bar_Colour.push(white);
+          } else if (colour == 'Red') {
+            Bar_Colour.push(red);
+          } else if (colour == 'Orange') {
+            Bar_Colour.push(orange);
+          } else if (colour == 'Yellow') {
+            Bar_Colour.push(yellow);
+          } else if (colour == 'Green') {
+            Bar_Colour.push(green);
+          } else if (colour == 'Blue') {
+            Bar_Colour.push(blue);
+          };
+
+          Graph.update();
+
+          document.getElementById('Task_Name').value = '';
+          document.getElementById('Task_Duration').value = '';
+          document.getElementById('Task_Description').value = '';
+        };
+      </script>
+      <script>
+        function New_Task() {
+
+        };
+      </script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="../CSS/nikodem.css">
+  </head>
+  <body>
+<div class="navbar">
+  <a href="https://nikodemkbinek.github.io/Coursework1/mycv.html" <p class="navbuttons">My CV</p>
+  <a href="https://www.linkedin.com/in/nikodem-binek-74786a20b/>"<p class="navbuttons">LinkedIn</p>
+  <a href="https://nikodemkbinek.github.io/Coursework1/"<p class="navbuttons">Project 1</p>
+  <a href="https://nikodemkbinek.github.io/Coursework2/"<p class="navbuttons">Project 2</p></a>
+</div>
+<div class="NameBox">
+<h1>Nikodem Binek</h1>
+<img src="../Images/me.jpg" style=" width: 10%; height: auto;">
+</div>
+<div class="bodybox">
+<div class="AbtMeBox">
+<h2>About Me</h2>
+<br>
+  <p>I am a computer science student at City University of London.
+    I really enjoy playing and watching football and I love to travel.
+    In the future I want to travel to as many countries as possible.
+    I currently work as a waiter or a bartender at private events.
+    I am a quick learner which is a very good skill to have, additionally
+    I am very organised and punctual which is also very usefull.</p>
+
+<br><hr><br>
+<h2>Some of the places I visited</h2>
+<br>
+    <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="../Images/Venice.jpg" style="width:100%; height:500px">
+  <div class="text">Venice</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="../Images/Barcelona.jpg" style="width:100%; height:500px">
+  <div class="text">Barcelona</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="../Images/Cairo.jpg" style="width:100%; height:500px">
+  <div class="text">Cairo</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="../Images/Cairo.jpg" style="width:100%; height:500px">
+  <div class="text">Cairo</div>
+</div>
+
+<a class="prev" style="left:0px;" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</div>
+<div class="PastEduBox">
+<h2>Past Education</h2>
+<hr><br>
+<b>Oasis Academy Shirley Park</b>
+  <p>2015-2020</p>
+  <iframe style="width:99%; height:300px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2490.112521706702!2d-0.06543878426751694!3d51.38260997961481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487600e2f6670539%3A0x8479796a733eb852!2sOasis%20Academy%20Shirley%20Park%20Secondary%20Phase!5e0!3m2!1spl!2suk!4v1673563039060!5m2!1spl!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<br><hr><br>
+  <b>Langley Park School for Boys</b>
+    <p>2020-2022</p>
+    <iframe style="width:99%; height:300px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2489.791787603745!2d-0.022270184267320425!3d51.388504679615835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760035320eecd1%3A0xe41842dcf74c1ebd!2sLangley%20Park%20School%20for%20Boys!5e0!3m2!1spl!2suk!4v1673563257200!5m2!1spl!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+  </body>
+</html>

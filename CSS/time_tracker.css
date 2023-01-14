@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+
+body{
+  font-family: 'ABeeZee', sans-serif;
+  background-color: #f8d4b4;
+  overflow: hidden;
+}
+
+/* ---Banner--- */
+body > .Container > .Banner{
+  display: flex;
+}
+
+body > .Container > .Banner > .Title{
+  float: left;
+  margin: auto;
+}
+
+body > .Container > .Banner > .Title > h1{
+  font-size: 3em;
+  text-align: left;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 20px;
+  color: black;
+}
+
+body > .Container > .Banner > .SubContent{
+  float: right;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+body > .Container > .Banner > .SubContent > nav > a{
+  margin: auto;
+  text-decoration: none;
+  padding: 5px;
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+body > .Container > .Banner > .SubContent > nav > a:hover{
+  cursor: pointer;
+  color: black;
+  border-bottom: none;
+}
+
+/* ---Website Content--- */
+body > .Container > .Body{
+  display: flex;
+}
+
+body > .Container > .Body > .Left{
+  float: left;
+  width: 40%;
+  height: auto;
+  padding: 5px;
+}
+
+body > .Container > .Body > .Left > .Card{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+body > .Container > .Body > .Left > .Card > form > input{
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid black;
+  background-color: #f8d4b4;
+  padding: 5px;
+}
+
+body > .Container > .Body > .Left > .Card > form > select{
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid black;
+  background-color: #f8d4b4;
+  padding: 5px;
+}
+
+body > .Container > .Body > .Left > .Card > button{
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid black;
+  background-color: #f8d4b4;
+  padding: 5px;
+}
+
+body > .Container > .Body > .Right{
+  float: right;
+  width: 60%;
+  height: auto;
+  padding: 5px;
+}
+
+.Card{
+  background-color: #f9e7d5;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
+}
+
+.Horizontal_Spacer{
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+}
+
+.Footer{
+  text-align: center;
+}
+
+#Tasks{
+  overflow-y: scroll;
+  max-height: 200px;
+}
+
+#Tasks > p{
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid black;
+  background-color: #f8d4b4;
+  padding: 5px;
+}
